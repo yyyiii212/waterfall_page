@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CoBi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+            <div class="circle1">
+                <div class="circle1-1"></div>
+                <div class="circle1-2"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="back1">
+        <div class="society">
+            <p class="mb-2">Society</p>
+            <button class="society-btn">Motocycle</button>
+            <button class="society-btn">3C</button>
+            <button class="society-btn">Computer</button>
+        </div>
+        <div class="container">
+            <p class="mb-2">Board</p>
+            <div class="row" id="masonry-grid">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/500/300?random=1" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body1">
+                                <div class="card-body-circle"></div>
+                                <p class="card-body-text">This is a sample card with some sample text.</p>
+                            </div>
+                            <div class="card-body1">
+                                <div class="card-body-circle"></div>
+                                <p class="card-body-text">This is a sample card with some sample text.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="https://picsum.photos/500/400?random=2" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body1">
+                                <div class="card-body-circle"></div>
+                                <div class="card-body-text">
+                                    <p>beautiful!</p>
+                                </div>
+                            </div>>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他卡片... -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script>
+        // 初始化 Masonry
+        var grid = document.querySelector('#masonry-grid');
+        var masonry = new Masonry(grid, {
+            itemSelector: '.col-lg-4, .col-md-6, .col-sm-12',
+            columnWidth: '.col-lg-4',
+            percentPosition: true
+        });
+    </script>
+</body>
+
+</html>
